@@ -28,7 +28,14 @@ try {
         runCommand = ''
       }
 
-      fs.writeFileSync(outputPath, instruction.getKeyword() + ' ' + instruction.getExpandedArguments().join(' ') + '\n', { flag: 'a+' })
+      fs.writeFileSync(
+        outputPath,
+        instruction.getKeyword() +
+          ' ' +
+          instruction.getExpandedArguments().join(' ') +
+          '\n',
+        { flag: 'a+' }
+      )
     }
   }
 } catch (e) {
